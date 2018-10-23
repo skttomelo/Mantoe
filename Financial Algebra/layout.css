@@ -1,0 +1,28 @@
+/*
+Name(s): Trevor Crow
+Date: 10/21/2018
+Description: financial algebra custom layout
+*/
+.finance{
+	width:50%;
+	height:500px;
+	background-size:100%;
+	position:relative;
+	color:white;
+}
+.margin-left-5px{margin-left:5px;}
+.bg-image-calculator{
+	width:100%;
+	height:100%;
+	background-image:url("https://www.vitalthrills.com/wp-content/uploads/2018/08/spiderman1-1.jpg");
+	filter:blur(8px);
+	-webkit-filter:blur(8px);
+	z-index:-1;
+}
+.text-outline{ /*if you want text to be outlined with black, then use this id*/
+    	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+}

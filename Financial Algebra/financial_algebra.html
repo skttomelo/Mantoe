@@ -1,0 +1,102 @@
+<!--
+Name(s): Trevor Crow
+Date: 10/22/2018
+Description: Calculator page
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Celena's Fianancial Algebra interest calculator">
+		<meta name="author" content="Trevor Crow">
+		<title>Financial Algebra</title>
+		<link rel="icon" href="">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--Custom Stylesheets-->
+		<link rel="stylesheet" href="layout.css">
+	</head>
+	<body>
+		<!--form and table-->
+		<div id="calculator" class="container finance rounded text-outline">
+			<div class="position-absolute bg-image-calculator"></div>
+			<h2 class="text-center">Financial Algebra Calculator (<i>Compound Interest is selected</i>)</h2>
+			<br>
+			<p class="float-left margin-left-5px">problem number/part</p>
+			<input type="text" id="problem" class="float-lef t margin-left-5px"/>
+			<br><br>
+			<p id="probtype" class="float-left margin-left-5px">Initial Amount</p>
+			<input type="text" id="p" class="float-left margin-left-5px"/>
+			<br><br>
+			<p class="float-left margin-left-5px">Interest rate (input as a decimal)</p>
+			<input type="text" id="r" class="float-left margin-left-5px"/>
+			<br><br>
+			<p class="float-left margin-left-5px">Number of times compounded in a year</p>
+			<input type="text" id="n" class="float-left margin-left-5px"/>
+			<br><br>
+			<p class="float-left margin-left-5px">How many years</p>
+			<input type="text" id="t" class="float-left margin-left-5px"/>
+			<br><br>
+			<input type="radio" class="margin-left-5px" name="problem_type" id="compound" checked="checked" onclick="checkType()">Compound Interest</input>
+			<br>
+			<input type="radio" class="margin-left-5px" name="problem_type" onclick="checkType()">Future value of a periodic deposit investment</input>
+			<br><br>
+			<button type="submit" class="float-right" onclick="createRow()">Submit</button>
+		</div>
+		<table id="results">
+			<tr>
+				<th>Problem Number/Part</th>
+				<th>Type of Problem</th>
+				<th>Answer</th>
+			</tr>
+		</table>
+		<!--Javascript for the calculator-->
+		<script>
+			class problem{
+				constructor(problem,isCompound,p,r,n,t){
+					this.problem = problem;
+					this.isCompound = isCompound;
+					this.p = Number(p);
+					this.r = Number(r);
+					this.n = Number(n);
+					this.t = Number(t);
+				}
+				solve(){
+					if(this.isCompound){
+						return (this.p*Math.pow((1+(this.r/this.n)),this.n*this.t));
+					}else{
+						return ((p*(Math.pow(1+(r/n),n*t)-1))/(r/n));
+					}
+				}
+			}
+			var problems = [];
+			function checkType(){
+				if(document.getElementById("compound").checked==true){
+					document.querySelector("i").innerHTML = "Compound Interest is selected";
+					return true;
+				}else{
+					document.querySelector("i").innerHTML = "Periodic Deposit is selected";
+					return false;
+				}
+			}
+			function createRow(){
+				problems.push(new problem(document.querySelector("#problem").value,checkType(),document.querySelector("#p").value,document.querySelector("#r").value,document.querySelector("#n").value,document.querySelector("#t").value));
+				var tr = document.createElement("tr");
+				tr.id = problems[problems.length-1].problem;
+				//set the problem column
+				var td = document.createElement("td");
+				td.innerHTML = problems[problems.length-1].problem;
+				tr.appendChild(td);
+				//set the problem type column
+				td = document.createElement("td");
+				if(checkType){td.innerHTML = "Compound Interest";}else{td.innerHTML = "Periodic Deposit"}
+				tr.appendChild(td);
+				//set the answer column
+				td = document.createElement("td");
+				td.innerHTML = problems[problems.length-1].solve();
+				tr.appendChild(td);
+				//
+				document.querySelector("#results").appendChild(tr);
+			}
+		</script>
+	</body>
+</html>
