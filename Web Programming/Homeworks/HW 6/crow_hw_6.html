@@ -1,0 +1,45 @@
+<!--
+Name(s): Trevor Crow
+Date: 10/30/2018
+Description: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <header class="header">
+            <button type="submit" onclick="start()">Start</button>
+            <button type="submit" onclick="stop()">Stop</button>
+            <button type="submit" onclick="reset()">Reset</button>
+        </header>
+        <section class="credits">
+
+        </section>
+        <script>
+            var scrolling = false;
+            var scr
+            while(true){
+                if((document.querySelector(".credits").y+document.querySelector(".credits").height)){
+                    if(scrolling){
+                        
+                    }
+                }
+            }
+            function start(){
+                scrolling = true;
+            }
+            function stop(){
+                scrolling = false;
+            }
+            function reset(){
+                stop();
+                window.scrollTo({
+                    top:0,
+                    behavior:"instant"
+                });
+            }
+        </script>
+    </body>
+</html>
