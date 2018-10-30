@@ -1,0 +1,83 @@
+/*
+Name(s): Trevor Crow, Cameron Foster, Chunhui Liu
+Date: 9/27/2018
+Description: Custom CSS page for site for extra things wanted that bootstrap didn't meet
+*/
+
+a{
+	color: #7696d3;
+}
+a:hover{
+	color:white;
+}
+
+.word-break{/*if element doesn't have word breaking on it from bootstrap on it, use this*/
+	word-break:break-word;
+}
+.text-outline{ /*if you want text to be outlined with black, then use this id*/
+    	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+}
+
+.footer{/*flushes the footer to the bottom of the site even if the screen doesn't have enough content to put it at the bottom*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height:90px;
+	width:100%;
+	background-color:#002f87;
+}
+
+.home-page-carousel{
+	margin:5% 1.5%;
+	width:75%;
+}
+.home-page-side{
+	width:22%;
+	margin-top:5%;
+	background-color:#8d99d3;
+
+}
+.bottom-left-content{
+	margin:1% 1.5%;
+	width:75%;
+}
+.bottom-left-content p{
+	margin-left:2%;
+	margin-right:2%;
+}
+.home-page-footer{
+	background-color:#002f87;
+	color:white !important;
+}
+/*
+.carousel{
+	display:relative;
+	width:850px;
+}
+.right{
+	padding:15px;
+	position:relative;
+	left:850px;
+	top:40px;
+	
+}
+.lower{
+	position:relative;
+	left:50px;
+	bottom:150px;
+	
+}
+.top{
+	width:400px;
+	font-size:12px;
+	padding:15px;
+	position:relative;
+	left:850px;
+	bottom:800px;
+}
+*/

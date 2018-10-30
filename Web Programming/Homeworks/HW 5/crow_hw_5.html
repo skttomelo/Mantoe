@@ -1,0 +1,69 @@
+<!--
+Name(s): Trevor Crow
+Date: 10/21/2018
+Description: Create an HTML web page, which display a grade book using HTML tag <table>. Provide your own table styling in an CSS file. Then create a button that allows to set or update the grade using JavaScript.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="hw_5_layout.css">
+	</head>
+	<body>
+		<h1>Grade Book for CSCI 4500</h1>
+		<table border="1">
+			<tr>
+				<th>Student ID</th>
+				<th>Name</th>
+				<th>HW1</th>
+				<th>HW2</th>
+				<th>Midterm</th>
+				<th>Final Exam</th>
+			</tr>
+			<tr id="1">
+				<td class="student_id">1</td>
+				<td class="name">Tom Sawyer</td>
+				<td class="hw1"></td>
+				<td class="hw2"></td>
+				<td class="midterm"></td>
+				<td class="final_exam"></td>
+			</tr>
+			<tr id="2">
+				<td class="student_id">2</td>
+				<td class="name">Neil Armstrong</td>
+				<td class="hw1"></td>
+				<td class="hw2"></td>
+				<td class="midterm"></td>
+				<td class="final_exam"></td>
+			</tr>
+			<tr id="3">
+				<td class="student_id">3</td>
+				<td class="name">Jack Cruise</td>
+				<td class="hw1"></td>
+				<td class="hw2"></td>
+				<td class="midterm"></td>
+				<td class="final_exam"></td>
+			</tr>
+		</table>
+		<br>
+		<button type="submit" onclick="updateGrade()">Set/Update Grade</button>
+		<script>
+			function updateGrade(){
+				var student_id = prompt("Enter the Student's ID");
+				var grade_to_change = prompt("Enter 2 for hw1, 3 for hw2, 4 for midterm, or 5 for final exam","");
+				var grade = prompt("Enter the grade","");
+				var td;
+				if(grade_to_change == 2){
+					td = document.getElementById(student_id).querySelector(".hw1");
+				}else if(grade_to_change == 3){
+					td = document.getElementById(student_id).querySelector(".hw2");			
+				}else if(grade_to_change == 4){
+					td = document.getElementById(student_id).querySelector(".midterm");
+				}else if(grade_to_change == 5){
+					td = document.getElementById(student_id).querySelector(".final_exam");
+				}
+				td.innerHTML = grade;
+			}
+		</script>
+	</body>
+</html>
