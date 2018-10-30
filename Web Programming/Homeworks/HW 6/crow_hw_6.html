@@ -430,12 +430,23 @@ Description:
             </pre>
         </section>
         <script>
-            var scrolling = false;
             function start(){
-                scrolling = true;
+                window.setTimeout(
+                    window.scrollTo({
+                        top:document.querySelector("body").scrollHeight+window.innerHeight,behavior:"smooth"
+                    }),
+                    5000
+                );
+                if(window.scrollY >= document.querySelector("body").scrollHeight+window.innerHeight){
+                    reset();
+                    start();
+                }
             }
             function stop(){
-                scrolling = false;
+                window.scrollTo({
+                    top:window.scrollY,
+                    behavior:"instant"
+                });
             }
             function reset(){
                 stop();
