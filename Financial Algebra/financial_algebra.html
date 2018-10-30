@@ -42,7 +42,7 @@ Description: Calculator page
 			<br><br>
 			<button type="submit" class="float-right" onclick="createRow()">Submit</button>
 		</div>
-		<table id="results">
+		<table id="results" border="1">
 			<tr>
 				<th>Problem Number/Part</th>
 				<th>Type of Problem</th>
@@ -64,7 +64,7 @@ Description: Calculator page
 					if(this.isCompound){
 						return (this.p*Math.pow((1+(this.r/this.n)),this.n*this.t));
 					}else{
-						return ((p*(Math.pow(1+(r/n),n*t)-1))/(r/n));
+						return ((this.p*(Math.pow(1+(this.r/this.n),this.n*this.t)-1))/(this.r/this.n));
 					}
 				}
 			}
@@ -72,9 +72,11 @@ Description: Calculator page
 			function checkType(){
 				if(document.getElementById("compound").checked==true){
 					document.querySelector("i").innerHTML = "Compound Interest is selected";
+					document.querySelector("#probtype").innerHTML = "Initial Amount";					
 					return true;
 				}else{
 					document.querySelector("i").innerHTML = "Periodic Deposit is selected";
+					document.querySelector("#probtype").innerHTML = "Periodic Deposit";
 					return false;
 				}
 			}
