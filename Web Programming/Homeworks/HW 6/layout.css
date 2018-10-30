@@ -3,13 +3,18 @@ Name(s): Trevor Crow
 Date: 10/30/2018
 Description: custom CSS for crow_hw_6.html 
 */
-*{
-	font-family:"arial";
-    background-color:;
+body{
+    background-color:black;
 }
 header{
     position: fixed;
+    width:auto;
+    margin:0 auto;
+}
+button{
+    float:left;
 }
 .credits{
     font-family:"arial";
+    color:white;
 }
