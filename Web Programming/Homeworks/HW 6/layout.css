@@ -6,6 +6,7 @@ Description: custom CSS for crow_hw_6.html
 *{
     font-family:"arial";
     color:white;
+    text-align:center;
 }
 body{
     background-color:black;
@@ -13,6 +14,13 @@ body{
 h1{
     color:lightgreen;
     word-break:break-word;
+}
+h2{
+    color:green;
+}
+ul{
+    list-style-type: none;
+    font-size:16pt;
 }
 header{
     position: fixed;
@@ -22,7 +30,9 @@ button{
     background-color:#d66444;
     border-color:#96391f;
     border-radius: 4px;
+    margin-right:5px;
 }
 section{
-    width:48%;
+    width:45%;
+    margin:0 auto;
 }
