@@ -7,7 +7,7 @@ Description: Scrolling credits list (No one has an assigned job though)
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" type="text/css" href="layout.css">
     </head>
     <body>
         <header>
@@ -21,96 +21,6 @@ Description: Scrolling credits list (No one has an assigned job though)
             <ul id="credits">
             </ul>
         </section>
-        <script>
-            var scrolling = false;
-            var currentPos = 0;
-            var finalPos;
-            function start(){//starts scrolling, sets currentPos to the window's scrollY and the finalPos to the bottom of the page
-                scrolling = true;
-                currentPos = window.scrollY;
-                finalPos = document.querySelector("body").scrollHeight-window.innerHeight+20;
-            }
-            function stop(){//stops scrolling
-                scrolling = false;
-            }
-            function reset(){//resets scroll position to the top of the screen and stops scrolling
-                stop();
-                currentPos=0;
-                window.scrollTo({
-                    top:currentPos,
-                    behavior:"instant"
-                });
-            }
-            function populateList(){//adds a bunch of names to a list for a fake credits list (made by: Trevor)
-                var listofFnames = ["Asher", "Jasper", "Cameron", "Teddy", "Phil", "Bryan", "Dave", "David", "Nick", "Nicholas", "Jake", "Jacob", "Malcolm", "Richard", "Michael", "Amelia", "Jasmine", "Ene", "Celene", "Stephanie", "Melanie", "Elyssa"];
-                var listofLnames = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Moore", "Anderson", "Jackson", "Stewart", "Cooper"];
-                var li = document.createElement("li");
-                var h2 = document.createElement("h2");
-                
-                h2.innerHTML = "Director:";
-                document.querySelector("#credits").appendChild(h2);
-                li = document.createElement("li");
-                li.appendChild(document.createTextNode(listofFnames[Math.floor(Math.random() * Math.floor(listofFnames.length))]+" "+listofLnames[Math.floor(Math.random() * Math.floor(listofLnames.length))]));
-                document.querySelector("#credits").appendChild(li);   
-                
-                h2 = document.createElement("h2");
-                h2.innerHTML = "Producers:";
-                document.querySelector("#credits").appendChild(h2);
-                for(var i = 0; i<3;i++){
-                    li = document.createElement("li");
-                    li.appendChild(document.createTextNode(listofFnames[Math.floor(Math.random() * Math.floor(listofFnames.length))]+" "+listofLnames[Math.floor(Math.random() * Math.floor(listofLnames.length))]));
-                    document.querySelector("#credits").appendChild(li);
-                }
-
-                h2 = document.createElement("h2");
-                h2.innerHTML = "Actors:";
-                document.querySelector("#credits").appendChild(h2);
-                for(var i = 0; i<47;i++){
-                    li = document.createElement("li");
-                    li.appendChild(document.createTextNode(listofFnames[Math.floor(Math.random() * Math.floor(listofFnames.length))]+" "+listofLnames[Math.floor(Math.random() * Math.floor(listofLnames.length))]));
-                    document.querySelector("#credits").appendChild(li);
-                }
-
-                h2 = document.createElement("h2");
-                h2.innerHTML = "Special Effects:";
-                document.querySelector("#credits").appendChild(h2);
-                for(var i = 0; i<5;i++){
-                    li = document.createElement("li");
-                    li.appendChild(document.createTextNode(listofFnames[Math.floor(Math.random() * Math.floor(listofFnames.length))]+" "+listofLnames[Math.floor(Math.random() * Math.floor(listofLnames.length))]));
-                    document.querySelector("#credits").appendChild(li);
-                }
-
-                h2 = document.createElement("h2");
-                h2.innerHTML = "Music:";
-                document.querySelector("#credits").appendChild(h2);
-                for(var i = 0; i<2;i++){
-                    li = document.createElement("li");
-                    li.appendChild(document.createTextNode(listofFnames[Math.floor(Math.random() * Math.floor(listofFnames.length))]+" "+listofLnames[Math.floor(Math.random() * Math.floor(listofLnames.length))]));
-                    document.querySelector("#credits").appendChild(li);
-                }
-
-                h2 = document.createElement("h2");
-                h2.innerHTML = "Made in:";
-                document.querySelector("#credits").appendChild(h2);
-                li = document.createElement("li");
-                li.appendChild(document.createTextNode("Georgia"));
-                document.querySelector("#credits").appendChild(li);
-            }
-
-            populateList();
-            setInterval(
-                    function(){
-                        if(scrolling){
-                            if(currentPos>=finalPos){
-                                currentPos=0;
-                                window.scrollTo(0,0);
-                            }
-                            currentPos+=4;
-                            window.scrollTo(0,currentPos);
-                        }
-                    },
-                    20
-            );
-        </script>
+        <script type="text/javascript" src="crow_hw_6_script.js"></script>
     </body>
 </html>
