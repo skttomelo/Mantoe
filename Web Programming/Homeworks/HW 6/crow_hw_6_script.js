@@ -50,6 +50,7 @@ var h2 = document.createElement("h2");
 h2.innerHTML = "Made in:";
 document.querySelector("#credits").appendChild(h2);
 document.querySelector("#credits").appendChild(document.createElement("li").appendChild(document.createTextNode("Georgia")));
+
 setInterval(
         function(){
             if(scrolling){
