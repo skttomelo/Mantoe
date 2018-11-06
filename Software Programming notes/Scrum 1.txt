@@ -1,0 +1,35 @@
+Scrum notes
+
+1. Do you advise them to obtain scrum training first before they adopt the Scrum framework?
+-Yes, unless they get the training it is difficult to follow the Scrum process.
+
+2. Do they need to discuss their intent with the customers and receive their approval to adopt Scrum before they start the project?
+-Yes, because it changes their delivery method
+
+3. What does incremental delivery mean?
+-Team release a potentially shippable software at the end of each sprint.
+
+4. How many people do you suggest involve in the scrum team.
+-plus or minus around 7 people is the rule of thumb so 5 to 9 people is best
+
+
+5. they want to list the scrum roles before assigning each person a role. Which of the following are Scrum roles. Choose all.
+-Scrum Master
+-Product Owner
+-Development Team
+
+6. They are planning to assign either Jessica or James for the role of scrum master. James doesn't know scrum but has eight years of experience in managing IT projects. Jessica knows scrum very well byt she's young and has no real world exp. Which one is a better choice for the role of scrum master?
+-Jessica because she knows scrum and doesn't have to manage the project
+
+
+7. They are going to assign Sara the database designer to take on the role of Product Owner; but they are not sure about this as Sara has no experience in Business administration and project management. Should they choose her?
+-No, they need a business oriented expert who can participate fully with the specialist work and is capable of communicating with the customer. (You have to communicate with the customer which requires some expertise)
+
+8. Which of the following is the main responsibility of the Product Owner?
+-maintaining the product backlog
+
+They are going to assign employee to the development team. They have two choices: 1 assign 9 part time developers that also work on other projects of their company or 2 change the arrangement of teams and assign only 5 off them full time and hire a new person to complete th e Team. Which is better?
+-Second one because it creates a more focused environment.
+
+10. No one in the current composition of the team knows hot to test a piece of software professionally and they do need to test each piece of software as it's developed. What should they do?
+-Add another person to the development team who is a pro software tester
