@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="hw7.css">
+		<meta name="viewport" content="width=device-width, initialscale=1.0">
+<head>
+<body>
+<center>
+<div class="whole">
+<h3>Guess my number</h3>
+<div class="middle">
+<p>I have a number<br>between 1 and 100</p>
+<input placeholder="Enter Number" id="guess"></input>
+<br><br>
+<button onclick="check()">Submit</button>
+<br><br>
+<p id="answer"></p>
+<p id="points"></p>
+</div>
+
+<p>Computer Science @ UNG</p>
+</div>
+<script>
+var R = 1+Math.floor(Math.random()*100); //assigns a random number between 1 and 100
+var P = 50;
+
+function check(){
+    var G, A, B, C, D, E, F;
+	G = Number(document.getElementById("guess").value);
+	A = R-5;
+	B = R+5;
+	C = R-10;
+	D = R+10;
+	E = R-15;
+	F = R+15;
+    if(isNaN(G)){
+        document.getElementById("answer").innerHTML = "Input is not a number";
+    }else if(G < 1 || G > 100){
+            document.getElementById("answer").innerHTML = "Please enter a number that is <u><b>BETWEEN</b></u> 1 and 100!";
+        }else{if (G >= A && G >= B){
+	document.getElementById("answer").innerHTML = "you are hot<br>Please try again<br>Points: ";	
+	P-=5;
+	}else if (G >= C && G >= D){
+	document.getElementById("answer").innerHTML = "you are warm<br>Please try again<br>Points: ";	
+	P-=5;
+	}else
+	if (G >= E && G >= F){
+	document.getElementById("answer").innerHTML = "you are hot<br>Please try again<br>Points: ";	
+	P-=5;
+	}else
+	if(G=R)
+	document.getElementById("").innerHTML = "that is correct"	
+
+	}
+	document.getElementById("points").innerHTML = P;
+   }
+  
+   
+
+</script>
+</body>
+</html>
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_12
