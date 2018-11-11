@@ -5,10 +5,10 @@ Description: Number Guessing Game
 */
 var R = 1+Math.floor(Math.random()*100); //assigns a random number between 1 and 100
 var score = 50;
+console.log(R);
 
-function check(){
+function checkGuess(){
     var G = Number(document.getElementById("guess").value);
-    console.log(G);
     if(isNaN(G)){
         document.getElementById("distance").innerHTML = "<i><u>Please</u> enter something that is a number!</i>";
     }else{
