@@ -21,6 +21,22 @@ function check(){
             }else if(60<=(G-R)<80){
                 document.getElementById("distance").innerHTML = "You are cold";
                 score -= 5;
+            }else if(40<=(G-R)<60){
+                document.getElementById("distance").innerHTML = "You are warm";
+                score -= 5;
+            }else if(20<=(G-R)<40){
+                document.getElementById("distance").innerHTML = "You are hot";
+                score -= 5;
+            }else if(0<(G-R)<20){
+                document.getElementById("distance").innerHTML = "You are burning";
+                score -= 5;
+            }else if((G-R)==0){
+                document.getElementById("distance").innerHTML = "You got it!";
+                score -= 5;
+            }
+
+            if(score<=0){
+                
             }
         }
     }

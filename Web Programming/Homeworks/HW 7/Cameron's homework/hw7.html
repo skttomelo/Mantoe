@@ -23,7 +23,7 @@
 <script>
 var R = 1+Math.floor(Math.random()*100); //assigns a random number between 1 and 100
 var P = 50;
-
+console.log(R);
 function check(){
     var G, A, B, C, D, E, F;
 	G = Number(document.getElementById("guess").value);
@@ -34,28 +34,34 @@ function check(){
 	E = R-15;
 	F = R+15;
     if(isNaN(G)){
-        document.getElementById("answer").innerHTML = "Input is not a number";
-    }else if(G < 1 || G > 100){
-            document.getElementById("answer").innerHTML = "Please enter a number that is <u><b>BETWEEN</b></u> 1 and 100!";
-        }else{if (G >= A && G >= B){
+    document.getElementById("answer").innerHTML = "Input is not a number";
+    }else{ if(G < 1 || G > 100){
+    document.getElementById("answer").innerHTML = "Please enter a number that is <u><b>BETWEEN</b></u> 1 and 100!";
+    }else {if (G >= A && G <= B){
 	document.getElementById("answer").innerHTML = "you are hot<br>Please try again<br>Points: ";	
 	P-=5;
-	}else if (G >= C && G >= D){
+	}else if (G >= C && G <= D){
 	document.getElementById("answer").innerHTML = "you are warm<br>Please try again<br>Points: ";	
 	P-=5;
-	}else
-	if (G >= E && G >= F){
+	}else if (G >= E && G <= F){
 	document.getElementById("answer").innerHTML = "you are hot<br>Please try again<br>Points: ";	
 	P-=5;
-	}else
-	if(G=R)
-	document.getElementById("").innerHTML = "that is correct"	
+	}else if(G = R){
+	document.getElementById("answer").innerHTML = "that is correct"	
+}
+}
+}
 
-	}
-	document.getElementById("points").innerHTML = P;
-   }
-  
+
+
+
+
+document.getElementById("points").innerHTML = P;
+}	
+	
    
+  
+   console.log(1+Math.floor(Math.random()*100));
 
 </script>
 </body>
