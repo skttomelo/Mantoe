@@ -1,12 +1,20 @@
+<!-- remove all comments I have made -->
+<!-- Chief this is it -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link rel="stylesheet" href="guess.css">
 </head>
 <body>
-<p>Guess a number between 1 and 100.</p>
-<button type="submit" onclick="game()">Guess</button>
-<script type="text/javascript" src="rancom.js"></script>
+<form>
+<h2>Guess My Number!</h2><br>
+<p>I have a number between 1 and 100</p><br>
+<input placeholder="Enter a Number" id="guess">
+<input type="button" value="Submit" onclick="game()">
+<p id="guess_distance"></p><br>
+<p id="score"></p>
+</form>
+<script type="text/javascript" src="random.js"></script>
 </body>
 </html>
