@@ -1,5 +1,87 @@
 /*
 Name(s): Trevor Crow
 Date: 11/8/2018
-Description: Styling for crow_hw_7.html to make it look decent and have a resonsive design
+Description: Styling for crow_hw_7.html to make it look decent and have a responsive design
 */
+body{
+    background-color:lightblue;
+}
+form{
+    border-style: solid;
+    border-color: #cd5b45;
+    background-color:lightcoral;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 50%;
+}
+h2,p{
+    font-family: arial;
+    font-size:200%;
+    padding: 0;
+    text-align: center;
+}
+div{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:235px;
+}
+#distance{
+    color:lightgreen;
+}
+#score{
+    color:lawngreen;
+}
+
+@media only screen and (max-width: 1230px) {
+    body{
+        background-color: #4ac598;
+    }
+    form{
+        border-radius: 10%;
+        border-style: dashed;
+        border-color: royalblue;
+        background-color: #6d8eef;
+    }
+    h2{
+        color:white;
+    }
+    h2,p{
+        font-family: serif;
+        font-size:150%;
+    }
+    #distance{
+        color:white;
+    }
+    #score{
+        color:#FF8A65;
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+    body{
+        background-image: url(https://us.123rf.com/450wm/lenalanette/lenalanette1601/lenalanette160100053/51873220-happy-crabs-seamless-colorful-pattern-with-cartoon-crabs-blue-background-with-bubbles.jpg?ver=6);
+        background-repeat: repeat;
+    }
+    form{
+        border-radius: 30%;
+        border-style: dotted;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6UNiCjwhl5tx0ZqwCDidsXJISsqEXPY0a4wCe9IJ_5UvcrHZXrQ);
+        background-size: 180%;
+        background-repeat: no-repeat;
+    }
+    h2,p{
+        color: black;
+        font-family: 'Times New Roman';
+        font-size:110%;
+    }
+    #distance,#score{
+        text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+        color: white;
+    }
+}

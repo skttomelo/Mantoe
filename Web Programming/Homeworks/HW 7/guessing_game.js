@@ -5,7 +5,7 @@ Description: Number Guessing Game
 */
 
 function randomNum(x,y){//random number generator between x and y
-    return x+Math.floor(Math.random()*y)
+    return x+Math.floor(Math.random()*y);
 }
 
 var R = randomNum(1,100); //assigns a random number between 1 and 100
@@ -42,11 +42,11 @@ function checkGuess(){
 
             if(score<=0){
                 document.getElementById("distance").innerHTML = "You lose, the number was actually " + R + "! If you'd like to try again, enter a new guess.";
-                document.getElementById("score").innerHTML = "0";
+                document.getElementById("score").innerHTML = "Score: 0";
                 score = 50; //resetting score
                 R = randomNum(1,100); //picking a new number between 1 and 100
             }else{
-                document.getElementById("score").innerHTML = score;
+                document.getElementById("score").innerHTML = "Score: "+score;
                 if(win == true){
                     score = 50; //resetting score
                     R = randomNum(1,100); //picking a new number between 1 and 100
