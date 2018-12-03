@@ -56,7 +56,19 @@ Description: validates data recieved, then inputs it into the database, then it 
         echo "Error creating Record: ".$conn->error;
     }
 
-    echo "<h1>You scored ".$correct." out of ".$row["correct_answers"]." correct</h1>";
+    echo "
+    <!DOCTYPE html>
+    <head>
+    <style> ";
+    include "layout.css";
+    echo "</style>
+    </head>
+    <body>
+    <form class='col-12'>
+    <h1>You scored ".$correct." out of ".$row["correct_answers"]." correct</h1>
+    </form>
+    </body>
+    ";
 
     $conn->close();
 ?>
