@@ -45,7 +45,6 @@ Description: validates data recieved, then inputs it into the database, then it 
     }
     if($sq == $row["sq"]){
         $correct++;
-        echo "p2";
     }
     if($tq == $row["tq"]){
         $correct++;
@@ -59,9 +58,7 @@ Description: validates data recieved, then inputs it into the database, then it 
     echo "
     <!DOCTYPE html>
     <head>
-    <style> ";
-    include "layout.css";
-    echo "</style>
+    <link rel='stylesheet' type='text/css' href=layout.css>
     </head>
     <body>
     <form class='col-12'>
